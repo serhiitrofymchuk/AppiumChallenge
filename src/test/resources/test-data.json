@@ -1,0 +1,72 @@
+{
+  "validCredentials": {
+    "username": "admin",
+    "password": "admin"
+  },
+  "samplesListScreen": {
+    "nativeViewSample": {
+      "title": "Native View",
+      "subtitle": "Chained View"
+    },
+    "sliderSample": {
+      "title": "Slider",
+      "subtitle": "Slide your number"
+    },
+    "verticalSwipingSample": {
+      "title": "Vertical swiping",
+      "subtitle": "Demos vertical swiping "
+    },
+    "dragAndDropSample": {
+      "title": "Drag & Drop",
+      "subtitle": "Demo drag and drop"
+    },
+    "doubleTapSample": {
+      "title": "Double Tap",
+      "subtitle": "Demo double tap button"
+    },
+    "longPressSample": {
+      "title": "Long Press",
+      "subtitle": "Demo Long press button"
+    },
+    "photoViewSample": {
+      "title": "Photo View",
+      "subtitle": "Ping & Zoom"
+    },
+    "webViewSample": {
+      "title": "Web View",
+      "subtitle": "View hacker news"
+    },
+    "carouselSample": {
+      "title": "Carousel",
+      "subtitle": "Demos swipe left & right"
+    },
+    "wheelPickerSample": {
+      "title": "Wheel Picker",
+      "subtitle": "Demos wheel picker color"
+    }
+  },
+  "nativeViewScreen": {
+    "viewOneText": "Hello World, I'm View one ",
+    "viewTwoText": "Hello World, I'm View two ",
+    "viewThreeText": "Hello World, I'm View three "
+  },
+  "verticalSwipingScreen": [
+    " C",
+    " C++",
+    " Javascript",
+    " Python",
+    " Rudy",
+    " RR",
+    " Java",
+    " C#",
+    " .net",
+    " MySql",
+    " Appium",
+    " Jasmine",
+    " Jest",
+    " Karma"
+  ],
+  "dragAndDropScreen": {
+    "successLabelText": "Circle dropped"
+  }
+}
