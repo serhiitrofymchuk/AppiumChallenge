@@ -19,39 +19,43 @@ public enum ConfigLoader {
     }
 
     public String getServerUrl() {
-        return getProperty("appium.server.url");
-    }
-
-    public String getServerIpAddress() {
-        return getProperty("appium.server.ipAddress");
-    }
-
-    public int getServerPort() {
-        return getIntegerProperty("appium.server.port");
+        return getProperty("appium.serverUrl");
     }
 
     public String getPlatformName() {
-        return getProperty("appium.platform.name");
+        return getProperty("appium.platformName");
     }
 
     public String getPlatformVersion() {
-        return getProperty("appium.platform.version");
+        return getProperty("appium.platformVersion");
     }
 
     public String getDeviceName() {
-        return getProperty("appium.device.name");
+        return getProperty("appium.deviceName");
     }
 
-    public String getAppLocation() {
-        return getProperty("appium.app.location");
+    public String getApp() {
+        return getProperty("appium.app");
+    }
+
+    public String getSauceLabsAppiumVersion() {
+        return getProperty("appium.sauceLabs.appiumVersion");
+    }
+
+    public String getSauceLabsUsername() {
+        return getProperty("appium.sauceLabs.username");
+    }
+
+    public String getSauceLabsAccessKey() {
+        return getProperty("appium.sauceLabs.accessKey");
     }
 
     public int getImplicitWaitTimeout() {
-        return getIntegerProperty("implicit.wait.timeout");
+        return getIntegerProperty("implicitWait.timeout");
     }
 
     public int getExplicitWaitTimeout() {
-        return getIntegerProperty("explicit.wait.timeout");
+        return getIntegerProperty("explicitWait.timeout");
     }
 
     private String getProperty(String key) {

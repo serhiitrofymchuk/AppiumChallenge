@@ -15,7 +15,7 @@ public class LoginScreen extends BaseScreen<LoginScreen> {
 
     private final InputWrapper usernameInput = new InputWrapper(driver, AppiumBy.accessibilityId("username"));
     private final InputWrapper passwordInput = new InputWrapper(driver, AppiumBy.accessibilityId("password"));
-    private final ButtonWrapper loginButton = new ButtonWrapper(driver, AppiumBy.xpath("//android.view.View[@content-desc='login']/android.widget.Button"));
+    private final ButtonWrapper loginButton = new ButtonWrapper(driver, AppiumBy.accessibilityId("login"));
 
     public LoginScreen(AppiumDriver driver) {
         super(driver, "Login");

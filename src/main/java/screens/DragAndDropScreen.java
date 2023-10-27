@@ -4,6 +4,7 @@ import elements.LabelWrapper;
 import elements.ViewWrapper;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
+import org.apache.logging.log4j.util.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import utils.GestureUtil;
@@ -48,6 +49,10 @@ public class DragAndDropScreen extends BaseScreen<DragAndDropScreen> {
 
     public String getSuccessLabelText() {
         logger.info("Getting the success label's text");
-        return successLabel.isPresent() ? successLabel.getText() : "";
+        if (successLabel.isPresent()) {
+            return successLabel.getText();
+        } else {
+            return Strings.EMPTY;
+        }
     }
 }

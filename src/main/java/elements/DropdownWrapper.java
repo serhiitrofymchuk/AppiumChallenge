@@ -107,13 +107,19 @@ public class DropdownWrapper extends BaseWebElementWrapper {
 
     private void initSelectedOptionWebElement() {
         logger.debug("Initializing the selected option WebElement");
-        selectedOptionWebElement = parentWebElementWrapper == null ? driver.findElement(selectedOptionLocator) :
-                parentWebElementWrapper.getWebElement().findElement(selectedOptionLocator);
+        if (parentWebElementWrapper == null) {
+            selectedOptionWebElement = driver.findElement(selectedOptionLocator);
+        } else {
+            selectedOptionWebElement = parentWebElementWrapper.getWebElement().findElement(selectedOptionLocator);
+        }
     }
 
     private void initOptionWebElements() {
         logger.debug("Initializing the option WebElements");
-        optionWebElements = parentWebElementWrapper == null ? driver.findElements(optionsLocator) :
-                parentWebElementWrapper.getWebElement().findElements(optionsLocator);
+        if (parentWebElementWrapper == null) {
+            optionWebElements = driver.findElements(optionsLocator);
+        } else {
+            optionWebElements = parentWebElementWrapper.getWebElement().findElements(optionsLocator);
+        }
     }
 }

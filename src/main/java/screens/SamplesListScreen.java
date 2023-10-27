@@ -230,7 +230,7 @@ public class SamplesListScreen extends BaseScreen<SamplesListScreen> {
     }
 
     private By getViewLocator(String viewId) {
-        return AppiumBy.xpath("//android.view.View[@content-desc='" + viewId + "']");
+        return AppiumBy.accessibilityId(viewId);
     }
 
     private By getTitleLabelLocator(String viewId) {

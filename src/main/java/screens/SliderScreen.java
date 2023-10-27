@@ -17,7 +17,7 @@ public class SliderScreen extends BaseScreen<SliderScreen> {
     public SliderScreen(AppiumDriver driver) {
         super(driver, "Slider");
         slider = new SliderWrapper(driver, AppiumBy.accessibilityId("slider"),
-                AppiumBy.xpath("//android.widget.SeekBar[@content-desc='slider']/preceding-sibling::android.widget.TextView"));
+                AppiumBy.xpath("//*[@content-desc='slider']/preceding-sibling::android.widget.TextView"));
         logger.info("The Slider screen initialized");
     }
 

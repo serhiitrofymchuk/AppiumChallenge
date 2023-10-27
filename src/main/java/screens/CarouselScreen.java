@@ -18,7 +18,7 @@ public class CarouselScreen extends BaseScreen<CarouselScreen> {
             AppiumBy.xpath("//android.widget.HorizontalScrollView//android.widget.TextView"));
 
     private final LabelWrapper pageNumberLabel = new LabelWrapper(driver,
-            AppiumBy.xpath("//android.widget.HorizontalScrollView/following-sibling::android.view.View//android.widget.TextView"));
+            AppiumBy.xpath("//android.widget.HorizontalScrollView/following-sibling::*//android.widget.TextView"));
 
     public CarouselScreen(AppiumDriver driver) {
         super(driver, "Carousel - Swipe left/right");

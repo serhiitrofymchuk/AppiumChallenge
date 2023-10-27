@@ -2,6 +2,7 @@ package screens;
 
 import elements.ImageWrapper;
 import elements.LabelWrapper;
+import elements.ViewWrapper;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.Dimension;
@@ -13,8 +14,8 @@ public class PhotoViewScreen extends BaseScreen<PhotoViewScreen> {
 
     private static final Logger logger = LoggerFactory.getLogger(PhotoViewScreen.class);
 
-    private final LabelWrapper label = new LabelWrapper(driver, AppiumBy.xpath("//android.view.View[@content-desc='photo']/android.widget.TextView"));
-    private final ImageWrapper photo = new ImageWrapper(driver, AppiumBy.xpath("//android.view.View[@content-desc='photo']/android.widget.ImageView"));
+    private final LabelWrapper label = new LabelWrapper(driver, AppiumBy.xpath("//*[@content-desc='photo']/android.widget.TextView"));
+    private final ImageWrapper photo = new ImageWrapper(driver, AppiumBy.xpath("//*[@content-desc='photo']/android.widget.ImageView"));
 
     public PhotoViewScreen(AppiumDriver driver) {
         super(driver, "Photos - Pinch & Zoom");

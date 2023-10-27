@@ -19,7 +19,7 @@ public class VerticalSwipingScreen extends BaseScreen<VerticalSwipingScreen> {
     private static final Logger logger = LoggerFactory.getLogger(VerticalSwipingScreen.class);
 
     private final ViewWrapper parentView =
-            new ViewWrapper(driver, AppiumBy.xpath("//android.widget.ScrollView[@content-desc='listview']/android.view.View"));
+            new ViewWrapper(driver, AppiumBy.xpath("//android.widget.ScrollView[@content-desc='listview']/*"));
 
     public VerticalSwipingScreen(AppiumDriver driver) {
         super(driver, "Vertical swiping");
@@ -47,7 +47,7 @@ public class VerticalSwipingScreen extends BaseScreen<VerticalSwipingScreen> {
         logger.info("Getting items that are currently displayed on the screen");
 
         // Getting the present child WebElements of the parent View
-        List<WebElement> webElements = parentView.getChildWebElements(AppiumBy.xpath("//android.view.View"));
+        List<WebElement> webElements = parentView.getChildWebElements(AppiumBy.xpath("//*"));
 
         // Converting to the Views
         List<ViewWrapper> views = convertToViews(webElements);
@@ -60,7 +60,7 @@ public class VerticalSwipingScreen extends BaseScreen<VerticalSwipingScreen> {
         logger.debug("Converting the WebElements to the Views");
 
         return IntStream.range(1, webElements.size() + 1)
-                .mapToObj(index -> new ViewWrapper(driver, AppiumBy.xpath("//android.view.View[" + index + "]"), parentView))
+                .mapToObj(index -> new ViewWrapper(driver, AppiumBy.xpath("//*[" + index + "]"), parentView))
                 .collect(Collectors.toList());
     }
 

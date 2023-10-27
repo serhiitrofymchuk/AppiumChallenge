@@ -52,9 +52,12 @@ public abstract class BaseWebElementWrapper {
 
     public boolean isPresent() {
         logger.debug("Checking if the WebElement is present");
-        return parentWebElementWrapper == null ?
-                !driver.findElements(locator).isEmpty() :
-                parentWebElementWrapper.isPresent() && !parentWebElementWrapper.getWebElement().findElements(locator).isEmpty();
+        if (parentWebElementWrapper == null) {
+            return !driver.findElements(locator).isEmpty();
+        } else {
+            return parentWebElementWrapper.isPresent() &&
+                    !parentWebElementWrapper.getWebElement().findElements(locator).isEmpty();
+        }
     }
 
     public boolean isNotPresent() {
@@ -108,8 +111,10 @@ public abstract class BaseWebElementWrapper {
 
     public void initWebElement() {
         logger.debug("Initializing the WebElement");
-        webElement = parentWebElementWrapper == null ?
-                driver.findElement(locator) :
-                parentWebElementWrapper.getWebElement().findElement(locator);
+        if (parentWebElementWrapper == null) {
+            webElement = driver.findElement(locator);
+        } else {
+            webElement = parentWebElementWrapper.getWebElement().findElement(locator);
+        }
     }
 }

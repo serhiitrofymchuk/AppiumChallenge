@@ -15,7 +15,7 @@ public class LongPressScreen extends BaseScreen<LongPressScreen> {
 
     private final ButtonWrapper longPressButton = new ButtonWrapper(driver, AppiumBy.accessibilityId("longpress"));
     private final LabelWrapper instructionLabel =
-            new LabelWrapper(driver, AppiumBy.xpath("//android.view.View[@content-desc='longpress']/preceding-sibling::android.widget.TextView"));
+            new LabelWrapper(driver, AppiumBy.xpath("//*[@content-desc='longpress']/preceding-sibling::android.widget.TextView"));
 
     public LongPressScreen(AppiumDriver driver) {
         super(driver, "Long Press Demo");
